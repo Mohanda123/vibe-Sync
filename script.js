@@ -147,6 +147,11 @@ async function searchSong(query) {
 }
 
 function selectTrack(track) {
+  if (!track.preview_url) {
+    alert("This track does not have a preview available. Please select another track.");
+    return;
+  }
+
   const roomRef = ref(db, `rooms/${roomId}`);
   update(roomRef, {
     currentSong: {
@@ -158,21 +163,25 @@ function selectTrack(track) {
     timestamp: 0,
     isPlaying: true,
   });
+
+  // Set the audio source
+  audio = new Audio(track.preview_url);
 }
 
 // Play/Pause Track
 function playpauseTrack() {
-  if (audio) {
-    const roomRef = ref(db, `rooms/${roomId}`);
-    if (audio.paused) {
-      audio.play();
-      update(roomRef, { isPlaying: true, timestamp: audio.currentTime });
-    } else {
-      audio.pause();
-      update(roomRef, { isPlaying: false, timestamp: audio.currentTime });
-    }
+  if (!audio || !audio.src) {
+    alert("No track loaded to play. Please select a track from the search results.");
+    return;
+  }
+
+  const roomRef = ref(db, `rooms/${roomId}`);
+  if (audio.paused) {
+    audio.play();
+    update(roomRef, { isPlaying: true, timestamp: audio.currentTime });
   } else {
-    alert("No track loaded to play.");
+    audio.pause();
+    update(roomRef, { isPlaying: false, timestamp: audio.currentTime });
   }
 }
 
