@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: aqua;
+}
+
+header p {
+  font-size: 1rem;
+  color: #b3b3b3;
+}
+
+/* User Setup Section */
+.user-setup {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-setup input {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+.user-setup button {
+  padding: 10px 20px;
+  background-color: aqua;
+  border: none;
+  border-radius: 5px;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.user-setup button:hover {
+  background-color: rgb(183, 239, 239);
+}
+
+/* Room Management Section */
+.room-management {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.room-management input {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+.room-management button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: aqua;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.room-management button:hover {
+  background-color: rgb(183, 239, 239);
+}
+
+/* Song Search Section */
+.song-search {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#spotifySearch {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #2c2c2c;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.song-search button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: aqua;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.song-search button:hover {
+  background-color: rgb(183, 239, 239);
+}
+
+#searchResults {
+  margin-top: 20px;
+  color: #ffffff;
+  text-align: left;
+}
+
+#searchResults .track {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+}
+
+#searchResults .track:hover {
+  background-color: #2c2c2c;
+}
+
+/* Music Player Section */
+.music-player {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.track-art {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  border: 3px solid aqua;
+  margin-right: 10px;
+}
+
+.track-details {
+  text-align: left;
+}
+
+.track-name {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.track-artist {
+  font-size: 1rem;
+  color: #b3b3b3;
+  margin: 0;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  color: aqua;
+  cursor: pointer;
+}
+
+.control-btn:hover {
+  color: rgb(183, 239, 239);
+}
+
+/* Chat Section */
+.chat {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#chatMessages {
+  max-height: 200px;
+  overflow-y: auto;
+  background: #121212;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.chat-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-input input {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background-color: aqua;
+  border: none;
+  border-radius: 5px;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: rgb(183, 239, 239);
+}
+
+/* Scrollbar for Chat Messages */
+#chatMessages::-webkit-scrollbar {
+  width: 5px;
+}
+
+#chatMessages::-webkit-scrollbar-thumb {
+  background-color: aqua;
+  border-radius: 5px;
+}

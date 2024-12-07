@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibeSync - Group Music Player</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>VibeSync</h1>
+      <p>Sync music and chat with your friends!</p>
+    </header>
+
+    <main>
+      <!-- User Setup Section -->
+      <section class="user-setup">
+        <input type="text" id="userNameInput" placeholder="Enter your name...">
+        <button onclick="setUserName()">Set Name</button>
+      </section>
+
+      <!-- Room Management Section -->
+      <section class="room-management">
+        <input type="text" id="roomIdInput" placeholder="Enter room ID...">
+        <button onclick="createRoom()">Create Room</button>
+        <button onclick="joinRoom()">Join Room</button>
+      </section>
+
+      <!-- Song Search Section -->
+      <section class="song-search">
+        <input type="text" id="spotifySearch" placeholder="Search for a song...">
+        <button onclick="searchAndPlay()">Search</button>
+        <div id="searchResults"></div>
+      </section>
+
+      <!-- Music Player Section -->
+      <section class="music-player">
+        <div class="player-info">
+          <div class="track-art"></div>
+          <div class="track-details">
+            <h2 class="track-name">Track Name</h2>
+            <p class="track-artist">Track Artist</p>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="control-btn" onclick="playpauseTrack()">
+            <i class="fa fa-play-circle fa-3x"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- Chat Section -->
+      <section class="chat">
+        <div id="chatMessages"></div>
+        <div class="chat-input">
+          <input type="text" id="chatInput" placeholder="Type a message...">
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
